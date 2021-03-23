@@ -37,11 +37,4 @@ layout: default
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
 
-<script src="https://utteranc.es/client.js"
-        repo="vergend/vergend.github.io"
-        issue-term="title"
-        label="Comment"
-        theme="preferred-color-scheme"
-        crossorigin="anonymous"
-        async>
-</script>
+{% include comments.html element=".post-content" github_account="vergend/vergend.github.io" require_cookie_consent="true" %}
