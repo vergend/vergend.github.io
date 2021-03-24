@@ -27,6 +27,7 @@ url: "vergend.com" # the base hostname & protocol for your site, e.g. http://exa
 #twitter_username: jekyllrb
 #github_username:  jekyll
 linkedin_username: mzlotnikov
+issues_repo: vergend/vergend.github.io
 
 # Build settings
 theme: minima

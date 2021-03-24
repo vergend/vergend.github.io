@@ -30,7 +30,9 @@ layout: default
     {{ content }}
   </div>
 
-{% include comments.html element=".post-content" github_account="vergend/vergend.github.io" require_cookie_consent="false" %}
+{% if page.comments_id %}
+    {% include comments.html issue_id=page.comments_id %}
+{% endif %}
 
   {%- if site.disqus.shortname -%}
     {%- include disqus_comments.html -%}
