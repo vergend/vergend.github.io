@@ -30,6 +30,8 @@ layout: default
     {{ content }}
   </div>
 
+{% include comments.html element=".post-content" github_account="vergend/vergend.github.io" require_cookie_consent="false" %}
+
   {%- if site.disqus.shortname -%}
     {%- include disqus_comments.html -%}
   {%- endif -%}
@@ -37,4 +39,3 @@ layout: default
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
 
-{% include comments.html element=".post-content" github_account="vergend/vergend.github.io" require_cookie_consent="false" %}
