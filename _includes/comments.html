@@ -3,23 +3,22 @@
     
     document.querySelector("{{ include.element }}").innerHTML = document.querySelector("{{ include.element }}").innerHTML + "<div id='comments'></div>";
     document.getElementById("comments").innerHTML = "<h3>Comments</h3><p>You can <a href='https://github.com/{{ include.github_account }}/issues/{{page.comment_issue_id}}' target='_blank'>view the comments</a> on GitHub.</p>";
-	
+
+document.write("fail");
     function reloadComments() {
         var elements = document.querySelectorAll('.comment');
         Array.prototype.forEach.call(elements, function(el, i){
+document.write("el");
             el.remove();
         });
         $.ajax("https://api.github.com/repos/{{ include.github_account }}/issues/{{page.comment_issue_id}}/comments?per_page=100", {
             headers: {Accept: "application/vnd.github.full+json"},
             dataType: "json",
             success: function(msg){
-document.write("success");
                 localStorage.setItem('comments_{{ include.github_account }}_{{page.comment_issue_id}}',JSON.stringify(msg));
                 loadComments(msg);
             },
             error: function() { 
-
-document.write("fail");
                 document.getElementById("comments").innerHTML = "<h3>Comments</h3><p>You can <a href='https://github.com/{{ include.github_account }}/issues/{{page.comment_issue_id}}' target='_blank'>view the comments</a> on GitHub. The comments cannot be shown inline because we have hit the rate limit of Github.</p>";
             }
         });
