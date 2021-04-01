@@ -2,3 +2,9 @@
 ---
 
 @import "{{ site.theme }}";
+
+p {
+  text-align: justify;
+  text-justify: inter-character;
+  text-indent: 20px;
+}
