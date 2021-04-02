@@ -32,7 +32,7 @@ issues_repo: vergend/vergend.github.io
 # Build settings
 theme: minima
 plugins:
-  - jekyll-katex
+#  - jekyll-katex
   - jekyll-feed
 
 # Exclude from processing.
