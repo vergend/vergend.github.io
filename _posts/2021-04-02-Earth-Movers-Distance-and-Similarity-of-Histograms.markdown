@@ -48,7 +48,7 @@ $$ \label{dab}d_{ab}\equiv |a-b|\tag{6}.$$
 
 However, it is important to keep in mind that in more complicated cases this separation can take on more intricate form, adapting EMD$(h_1,h_2)$ to the specifics of the new problem.
 
-Note that, since the earth mover's distance considers not just a pairwise difference but allows for the flow of water between any two buckets weighted by their separation, intuitively it is much better equipped to estimate the amount of similarity under a shift of weights, than the Euclidean distance. (See the explicit example given at the end.)
+Note that, since the earth mover's distance considers not just a pairwise difference but allows for the flow of water between any two buckets weighted by their separation, intuitively it is much better equipped to estimate the amount of similarity under a shift of weights than the Euclidean distance. (See the explicit example given at the end.)
 
 # Calculation of Earth Mover's Distance
 Constrained minimization problems such as $\eqref{EMD}$ under the requirements $(\ref{pos},\ref{source},\ref{sink},\ref{norm})$ fall under the category of [linear programming](https://en.wikipedia.org/wiki/Linear_programming){:target="_blank"}; and, sure enough, we can use an off-the-shelf linear optimization solver to determine the optimal flow components $f_{ab}$. Linear programming is quite a non-trivial task, and is subject of extensive research by many brilliant scientists around the world --- suggesting that being mere tourists in this area, we may want to settle with the off-the-shelf solver provided by professionals as our best tool of choice. On the other hand, out of curiosity we may want to explore a bit further.
