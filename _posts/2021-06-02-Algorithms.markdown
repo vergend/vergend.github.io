@@ -42,7 +42,7 @@ In cases when a graph contains directed edges, meaning that the respective edge 
 
 ![Example of a graph with directed edges.](/assets/images/directedGraph.png)
 
-has one strongly connected component, comprised of nodes $2,3,4,5,6,7$, since each of these nodes can be reach from each other node in the strongly connected component by following edges in the specified directions.
+has one strongly connected component, comprised of nodes $2,3,4,5,6,7$, since each of these nodes can be reached from each other node in the strongly connected component by following edges in the specified directions.
 
 It turns out that doing a minimal amount of book keeping, the task of finding all strongly connected components in a graph can be accomplished by essentially performing two runs of [Depth-First Search (DFS)](https://en.wikipedia.org/wiki/Depth-first_search){:target="_blank"} through the graph. This results in an algorithm with linear running time $\mathcal{O}(m+n)$ in the number of nodes $n$ and edges $m$ in the graph.
 
